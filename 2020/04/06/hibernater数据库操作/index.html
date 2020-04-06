@@ -6,19 +6,29 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | Jon Liu</title>
+  <title>hibernate数据库操作 | Jon Liu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="开发环境的搭建 配置连接数据库信息 自动生成对应映射文件注意：首先确定是否能连接数据库生成映射文件 通过Hibernate API编写访问数据库的代码指定关联的hbm.xml文件 简单的小测试  参考文献www.ayuan.cn">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2020/04/05/hello-world/index.html">
+<meta property="og:title" content="hibernate数据库操作">
+<meta property="og:url" content="http://yoursite.com/2020/04/06/hibernater%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="Jon Liu">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="开发环境的搭建 配置连接数据库信息 自动生成对应映射文件注意：首先确定是否能连接数据库生成映射文件 通过Hibernate API编写访问数据库的代码指定关联的hbm.xml文件 简单的小测试  参考文献www.ayuan.cn">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-05T05:18:22.887Z">
-<meta property="article:modified_time" content="2020-04-05T05:18:22.887Z">
+<meta property="og:image" content="http://yoursite.com/2020/04/06/hibernater%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/1.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/06/hibernater%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/2.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/06/hibernater%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/3.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/06/hibernater%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/4.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/06/hibernater%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/5.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/06/hibernater%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/6.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/06/hibernater%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/7.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/06/hibernater%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/8.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/06/hibernater%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/9.png">
+<meta property="article:published_time" content="2020-04-06T12:07:03.000Z">
+<meta property="article:modified_time" content="2020-04-06T12:30:22.295Z">
 <meta property="article:author" content="John Liu">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/06/hibernater%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/1.png">
   
     <link rel="alternative" href="/atom.xml" title="Jon Liu" type="application/atom+xml">
   
@@ -154,39 +164,33 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-hibernater数据库操作" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      hibernate数据库操作
     </h1>
   
 
         
-        <a href="/2020/04/05/hello-world/" class="archive-article-date">
-  	<time datetime="2020-04-05T05:18:22.887Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-05</time>
+        <a href="/2020/04/06/hibernater%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/" class="archive-article-date">
+  	<time datetime="2020-04-06T12:07:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h2 id="开发环境的搭建"><a href="#开发环境的搭建" class="headerlink" title="开发环境的搭建"></a>开发环境的搭建</h2><p><img src="/2020/04/06/hibernater%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/1.png" alt></p>
+<h2 id="配置连接数据库信息"><a href="#配置连接数据库信息" class="headerlink" title="配置连接数据库信息"></a>配置连接数据库信息</h2><p><img src="/2020/04/06/hibernater%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/2.png" alt></p>
+<h2 id="自动生成对应映射文件"><a href="#自动生成对应映射文件" class="headerlink" title="自动生成对应映射文件"></a>自动生成对应映射文件</h2><p>注意：首先确定是否能连接数据库<br><img src="/2020/04/06/hibernater%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/3.png" alt><br>生成映射文件<br><img src="/2020/04/06/hibernater%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/4.png" alt><br><img src="/2020/04/06/hibernater%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/5.png" alt><br><img src="/2020/04/06/hibernater%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/6.png" alt><br><img src="/2020/04/06/hibernater%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/7.png" alt></p>
+<h2 id="通过Hibernate-API编写访问数据库的代码"><a href="#通过Hibernate-API编写访问数据库的代码" class="headerlink" title="通过Hibernate API编写访问数据库的代码"></a>通过Hibernate API编写访问数据库的代码</h2><p>指定关联的hbm.xml文件<br><img src="/2020/04/06/hibernater%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/8.png" alt></p>
+<h2 id="简单的小测试"><a href="#简单的小测试" class="headerlink" title="简单的小测试"></a>简单的小测试</h2><p><img src="/2020/04/06/hibernater%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/9.png" alt></p>
+<hr>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://www.ayuan.cn" target="_blank" rel="noopener">www.ayuan.cn</a></p>
 
       
 
@@ -266,7 +270,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/05/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/06/hibernater%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -280,15 +284,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/04/05/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          我的博客文章
-        
-      </div>
-    </a>
   
+    <a href="/2020/04/05/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Struts2</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
